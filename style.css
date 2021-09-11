@@ -1,0 +1,101 @@
+.container {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  flex-direction: column;
+  display: flex;
+}
+
+.container-center {
+  margin: 0 auto;
+}
+
+/* ==== Titulo */
+
+.frete {
+  background: var(--title);
+  padding: 2rem;
+}
+
+.frete p {
+  color: var(--white)
+}
+
+/* ==== Nome da Loja */
+
+.page-title {
+  color: var(--title);
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+/* ===== Banner */
+
+.banner {
+  width: 100%;
+  height: 35rem;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)100%), url('/assets/img/wallpaper.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.banner-text {
+  color: var(--white);
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  padding: 2rem 0;
+  font-weight: 600;
+}
+
+.banner-description {
+  line-height: calc(2rem * 1.5);
+  font-weight: 500;
+}
+
+/* ===== Destaques */
+.destaques {
+  text-align: center;
+}
+
+.destaques h3 {
+  margin-top: 8rem;
+  font-size: 3rem;
+  color: var(--title);
+}
+
+.destaques p {
+  margin-top: 1rem;
+  color: var(--text);
+}
+
+/* ===== Cards */
+.grid-container {
+  display: grid;
+  grid-gap: 3rem 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 8rem;
+}
+
+.grid-item {
+  display: flex;
+  background-color: var(--bgCard);
+  border-radius: 5px;
+}
+
+/* ===== Footer */
+footer {
+  margin-top: 5rem;
+}
+
+footer p {
+  font-size: 1.5rem;
+}
