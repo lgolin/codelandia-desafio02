@@ -1,6 +1,6 @@
 # Codelândia
 <p align="center">
-	<img src="/assets/Shop - Home (Mobile).png" alt="Codelândia" title="Codelândia">
+	<img src="/assets/img/jordan-shoes.png" alt="Codelândia" title="Codelândia">
 </p>
 
 ## About   
