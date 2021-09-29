@@ -26,7 +26,7 @@ This project was developed for the second challenge of the **[Codelandia](https:
 
 You can view the project layout through the links below:
 
-- **[Figma](https://www.figma.com/file/Yb9IBH56g7T1hdIyZ3BMNO/Codel%C3%A2ndia-Desafios?node-id=0%3A1)**<br>
+- **[Figma](https://www.figma.com/file/Yb9IBH56g7T1hdIyZ3BMNO/Desafios---Codel%C3%A2ndia?node-id=1883%3A2)**<br>
 
 ---
 
