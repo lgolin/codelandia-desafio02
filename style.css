@@ -1,44 +1,59 @@
-.container {
-  margin-left: 5rem;
-  margin-right: 5rem;
-  flex-direction: column;
-  display: flex;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
+
+:root {
+  --dark-grey: #181818;
+  --grey: #474747;
+  --light-grey: #ebe9ea;
+  --light: #F6F6F6;
+}
+
+html {
+  background-color: var(--light);
+}
+
+.bg-black {
+  background-color: var(--dark-grey);
+  color: var(--light);
+  text-align: center;
+}
+/* .container{
+  margin: 0 4rem;
+} */
 
 .container-center {
-  margin: 0 auto;
+ padding: 1rem 0;
+ display: flex;
+ justify-content: center;
+ text-align: center;
 }
 
-/* ==== Titulo */
-
-.frete {
-  background: var(--title);
-  padding: 2rem;
+.container-center .title {
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 
-.frete p {
-  color: var(--white)
+p {
+  margin-bottom: 0;
 }
 
-/* ==== Nome da Loja */
-
-.page-title {
-  color: var(--title);
-  padding: 2rem;
-  font-size: 2rem;
-}
-
-/* ===== Banner */
-
+/* ===== Banner ===== */
 .banner {
-  width: 100%;
-  height: 35rem;
+  background:linear-gradient(rgba(0,0,0,0.43),rgba(0,0,0,0.6)),url('./assets/img/wallpaper.jpeg'); 
 
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)100%), url('/assets/img/wallpaper.jpeg');
+  /* fazendo a imagem ocupar a largura toda da tela */
+  background-position: center; 
   background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: scroll;
   background-size: cover;
+  
+  height: 50vh; /* tamanho que vai ocupar */
+
+  color: var(--light);
+  font-weight: 500;
 
   display: flex;
   flex-direction: column;
@@ -46,56 +61,143 @@
   align-items: flex-start;
 }
 
-.banner-text {
-  color: var(--white);
+.banner .banner-title {
+font-size: 1.8rem;
+margin-bottom: 1rem;
 }
 
-.banner-title {
-  font-size: 2.5rem;
-  padding: 2rem 0;
-  font-weight: 600;
+.banner .banner-description {
+ width: 36%;
+ line-height: calc(1 * 1.8rem);
 }
 
+/*==== texto animado ===== */
 .banner-description {
-  line-height: calc(2rem * 1.5);
-  font-weight: 500;
+  position: relative;
+  /* top: 50%;  */
+  width: 20rem;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 1rem;
+  color: var(--light-grey);
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 600;
+  transform: translateY(-10%);
 }
 
-/* ===== Destaques */
-.destaques {
-  text-align: center;
+/* Animation */
+.anim-typewriter {
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
 }
 
-.destaques h3 {
-  margin-top: 8rem;
-  font-size: 3rem;
-  color: var(--title);
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 26em;
+  }
 }
 
-.destaques p {
-  margin-top: 1rem;
-  color: var(--text);
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
-/* ===== Cards */
-.grid-container {
-  display: grid;
-  grid-gap: 3rem 1rem;
-  grid-template-columns: repeat(4, 1fr);
-  margin-top: 8rem;
+@keyframes caret {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
-.grid-item {
-  display: flex;
-  background-color: var(--bgCard);
-  border-radius: 5px;
-}
 
-/* ===== Footer */
-footer {
-  margin-top: 5rem;
-}
-
-footer p {
+/* ===== Destaques ===== */
+.destaques-title {
+  margin: 2rem 0 1rem 0;
   font-size: 1.5rem;
+}
+
+/* ===== Images ===== */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 12rem;
+  
+}
+
+.container .wrapper div {
+  background-color: var(--light-grey);
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+img {
+  display: flex;
+  width: 15.5rem;
+  margin: 0 auto;
+  transition: 0.2s;
+}
+
+img:hover {
+  opacity: 50%;
+}
+
+/* ============================= Media Queries */
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 12rem;
+  }
+
+  .banner .banner-description {
+    width: 70%;
+    line-height: calc(1 * 1.5rem);
+   }
+
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 12rem;
+  }
+
+  .banner .banner-description {
+    width: 60%;
+    line-height: calc(1 * 1.5rem);
+   }
+
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 0.9rem;
+  }
+  .banner .banner-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    }
+ 
+    .banner .banner-description {
+    width: 90%;
+    line-height: calc(1 * 1.5rem);
+   }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 12rem;
+  }
 }
