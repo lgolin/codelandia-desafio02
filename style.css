@@ -22,15 +22,21 @@ html {
   color: var(--light);
   text-align: center;
 }
- .container{
-  margin: 0 100px;
+
+.container {
+  margin: 0 auto;
+}
+ .banner_container {
+  max-width: 1200px;
+  margin: 0 80px;
+
 }
 
 .container-center {
- padding: 1rem 0;
- display: flex;
- justify-content: center;
- text-align: center;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .container-center .title {
@@ -44,13 +50,14 @@ p {
 
 /* ===== Banner ===== */
 .banner {
-  background:linear-gradient(rgba(0,0,0,0.43),rgba(0,0,0,0.6)),url('./assets/img/wallpaper.jpeg');
+  background: linear-gradient(rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.6)), url('./assets/img/wallpaper.jpeg');
+
 
   /* fazendo a imagem ocupar a largura toda da tela */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
+
   height: 50vh; /* tamanho que vai ocupar */
 
   color: var(--light);
@@ -63,13 +70,13 @@ p {
 }
 
 .banner .banner-title {
-font-size: 1.8rem;
-margin-bottom: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .banner .banner-description {
- max-width: 25.245rem;
- line-height: calc(1 * 1.8rem);
+  max-width: 25.245rem;
+  line-height: calc(1 * 1.8rem);
 }
 
 /*==== texto animado ===== */
@@ -97,32 +104,49 @@ margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 
-/* ===== Images ===== */
-img {
-  max-width: 250px;
+.destaques-description {
+  margin-bottom: 3.72rem;
 }
 
+/* ===== Images ===== */
 .wrapper {
-  max-width: 1450px;
+  max-width: 1200px;
+  margin: 0 auto;
+
   display: flex;
   flex-wrap: wrap;
-
-  margin: 60px auto;
+  justify-content: center;
 }
 
 .wrapper-item {
-  margin: 15px 10px ;
-  padding: 50px 10px;
-
+  flex: 1 1 calc(20% - 10px);
   display: flex;
-  justify-content: space-around;
-  flex: 1 1 250px;
   align-items: center;
 
-  background-color: var(--light-grey);
+  margin: 10px 10px;
+
+  height: 300px;
+  width: 300px;
+
+  background: var(--light-grey);
+  transition: 0.2s;
 }
 
- /*====== Media Queries ======*/
+.wrapper-item:hover {
+  opacity: 0.5;
+}
+
+.wrapper-item img {
+  margin: 0 auto;
+  /*width: 100%;*/
+}
+
+
+footer {
+  margin-top: 6.25rem;
+}
+
+/*====== Media Queries ======*/
 
 @media screen and (max-width: 992px) {
   html {
@@ -130,8 +154,12 @@ img {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   html {
     font-size: 86%;
+  }
+
+  .wrapper-item {
+    flex: 0;
   }
 }

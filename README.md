@@ -1,5 +1,3 @@
-# JordanShoes
-
 <p align="center">
 	<img src="https://imgur.com/o45QHdg.png" alt="JordanShoes" title="JordanShoes">
 </p>
@@ -8,11 +6,7 @@
 
 This project was developed for the second challenge of the **[Codelandia](https://discord.com/invite/QevDJqCzaY)** community. The aim of this project was to practice frontend development by developing a simple shoe shop.
 
-<p align="center">
-	<img src="https://imgur.com/6suM1Fj.png" alt="JordanShoes" title="JordanShoes">
-</p>
-
----
+![](assets/image.gif)
 
 ## Technologies
 
