@@ -130,10 +130,12 @@ p {
 
   background: var(--light-grey);
   transition: 0.2s;
+  opacity: 1;
 }
 
 .wrapper-item:hover {
-  opacity: 0.5;
+  filter:opacity(30%);
+  cursor: pointer;
 }
 
 .wrapper-item img {
